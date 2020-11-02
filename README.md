@@ -13,3 +13,12 @@ $ brew info mysql
 $ brew install mysql
 ```
 
+## 常用指令
+
+- Run .php in terminal（ex:index.php)
+`$ php index.php`
+
+- Run .php in browser
+`$ php -S localhost:8888`
+
+
