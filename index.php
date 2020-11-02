@@ -27,13 +27,7 @@ $person = [
 
 $person['name'] = 'Nini';
 
-// echo "<pre>";
-// var_dump($person);
-// echo "</pre>";
-
 unset($person['age']);
-
-// die('Hello world');
 
 $task = [
   'title' => 'practice php',
@@ -42,7 +36,33 @@ $task = [
   'completed' => false
 ];
 
-approve(17);
+// approve(17);
 
+class Task {
+
+  public $description;
+  public $completed = false;
+  
+  public function __construct($description) {
+    // automatically trigged on instantiation
+    $this->description = $description;
+  }
+
+  public function complete() {
+    $this->complete = true;
+  }
+
+  public function isComplete() {
+    return $this->completed;
+  }
+}
+
+$tasks = [
+  new Task('Go to the store'),
+  new Task('Finish my screencast'),
+  new Task('Clean my room')
+];
+
+$tasks[1]->complete();
 
 require 'index.view.php';

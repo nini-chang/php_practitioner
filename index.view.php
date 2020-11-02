@@ -50,7 +50,7 @@
       <?php endforeach; ?>
    </ul>
 
-   <h3>Task To DO</h3>
+   <h3>Task To Do</h3>
    <ul>
       <?php foreach ($task as $heading => $value) : ?>
          <li>
@@ -60,7 +60,7 @@
       <?php endforeach; ?>
    </ul>
 
-   <h3>Task To DO: Part 2</h3>
+   <h3>Task To Do: Part 2</h3>
    <ul>
       <li>
          <b>Name: </b><?= $task['title']; ?>
@@ -75,6 +75,21 @@
          <b>Status: </b><?= $task['completed'] ? 'Complete' : 'InComplete'; ?>
       </li>
    </ul>
+
+   <h3>Task To Do: Part 3</h3>
+   <ul>
+      <?php foreach ($tasks as $task) : ?>
+         <li>
+            <?php if($task->complete) : ?>
+               <s><?= $task->description; ?></s>
+            <?php else: ?>
+               <?= $task->description; ?>
+            <?php endif; ?>
+            
+         </li>
+      <?php endforeach; ?>
+   </ul>
+
 </body>
 
 </html>
